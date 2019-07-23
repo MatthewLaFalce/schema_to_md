@@ -4,7 +4,7 @@
   <a href="https://github.com/MatthewLaFalce/schema_to_md/blob/master/README.md">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
   </a>
-  <a href="licenseurl">
+  <a href="https://github.com/MatthewLaFalce/schema_to_md/blob/master/LICENSE">
     <img alt="License: license" src="https://img.shields.io/badge/License-license-yellow.svg" target="_blank" />
   </a>
 </p>
@@ -42,5 +42,5 @@ Give a ⭐️ if this project helped you!
 ## License
 
 Copyright © 2019 [Matthew LaFalce](https://github.com/MatthewLaFalce).<br />
-This project is [license](licenseurl) licensed.
+This project is [license](https://github.com/MatthewLaFalce/schema_to_md/blob/master/LICENSE) licensed.
 
