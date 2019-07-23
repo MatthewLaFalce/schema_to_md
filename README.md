@@ -42,5 +42,5 @@ Give a ⭐️ if this project helped you!
 ## License
 
 Copyright © 2019 [Matthew LaFalce](https://github.com/MatthewLaFalce).<br />
-This project is [license](https://github.com/MatthewLaFalce/schema_to_md/blob/master/LICENSE) licensed.
+This project is [MIT](https://github.com/MatthewLaFalce/schema_to_md/blob/master/LICENSE) licensed.
 
