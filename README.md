@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to schema_to_md 👋</h1>
+<h1 align="center">Welcome to Schema_to_md 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-v1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/MatthewLaFalce/schema_to_md/blob/master/README.md">
@@ -16,13 +16,40 @@
 ## Install
 
 ```bash
-$ git clone git@github.com:MatthewLaFalce/schema_to_md.git
+git clone git@github.com:MatthewLaFalce/schema_to_md.git
+export PATH=$PATH:~/Github/schema_to_md
+# then follow Rails ERD installation below
 ```
 
 ## Usage
 
 ```bash
-$ ruby to_md.rb <schema.rb>
+# Run this command at the head of any Rails Web App
+to_md
+```
+
+## Rails ERD
+
+```bash
+# Requires download of Graphviz
+brew install graphviz       # Homebrew on Mac OS X
+sudo port install graphviz  # Macports on Mac OS X
+sudo apt install graphviz   # Debian and Ubuntu
+
+#put this in projects gem file
+
+group :development do
+  gem 'rails-erd'
+end
+
+# Then run
+bundle install
+
+# Generate simple erd
+rake erd filetype='png' notation=bachman filename='erd_simple'
+
+# Generate complex erd
+rake erd polymorphism=true filetype='png' notation=bachman filename='erd_complex'
 ```
 
 ## Author
