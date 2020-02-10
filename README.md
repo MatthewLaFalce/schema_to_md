@@ -50,6 +50,9 @@ rake erd filetype='png' notation=bachman filename='erd_simple'
 
 # Generate complex erd
 rake erd polymorphism=true filetype='png' notation=bachman filename='erd_complex'
+
+# Most Useful
+rake erd polymorphism=true filetype='png' notation=bachman filename='erd' exclude='ApplicationRecord,Record,Searchable'
 ```
 
 ## Author
