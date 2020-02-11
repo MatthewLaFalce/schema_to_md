@@ -55,6 +55,43 @@ rake erd polymorphism=true filetype='png' notation=bachman filename='erd_complex
 bundle exec rake erd polymorphism=true filetype='png' notation=bachman filename='erd' exclude='ApplicationRecord,Record,Searchable,PgSearch::Document,ActiveStorage::Attachment,ActiveStorage::Blob'
 ```
 
+## Automated Rails ERD Setup
+
+```yml
+# Put this in your projects .erdconfig file
+#!/bin/yml
+
+filename: 'erd'
+filetype: 'png'
+notation: 'bachman'
+polymorphism: true
+title: 'Docupiler ER Diagram'
+exclude: 'ApplicationRecord,Record,Searchable,PgSearch::Document,ActiveStorage::Attachment,ActiveStorage::Blob,ActiveRecord::InternalMetadata,ActiveRecord::SchemaMigration'
+```
+
+```ruby
+# Put this in your projects Gemfile
+group :development do
+  gem 'rails-erd'
+end
+
+# Put this in your project Rakefile if you uses :sql for your schema format
+Rake::Task["db:migrate"].enhance do
+  if ActiveRecord::Base.schema_format == :sql
+    Rake::Task["db:schema:dump"].invoke
+  end
+end
+
+# Run this to install the Gem to your project
+bundle install
+
+# Run this to set up the Rake task to work with db:migrate
+bundle exec rails g erd:install
+
+# To generate your new diagram just run
+bundle exec rails db:migrate
+```
+
 ## Author
 
 👤 **Matthew LaFalce**
