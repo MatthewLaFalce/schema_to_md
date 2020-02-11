@@ -52,7 +52,7 @@ rake erd filetype='png' notation=bachman filename='erd_simple'
 rake erd polymorphism=true filetype='png' notation=bachman filename='erd_complex'
 
 # Most Useful
-rake erd polymorphism=true filetype='png' notation=bachman filename='erd' exclude='ApplicationRecord,Record,Searchable'
+bundle exec rake erd polymorphism=true filetype='png' notation=bachman filename='erd' exclude='ApplicationRecord,Record,Searchable,PgSearch::Document,ActiveStorage::Attachment,ActiveStorage::Blob'
 ```
 
 ## Author
